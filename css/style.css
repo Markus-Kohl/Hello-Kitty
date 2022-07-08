@@ -1,259 +1,358 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box; }
+
 body {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
 
-@keyframes rotation {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
-.micky-mouse-container *,
-.micky-mouse-container *:after,
-.micky-mouse-container *:before,
-.micky-mouse-container:after,
-.micky-mouse-container:before {
-  box-sizing: border-box;
+.hello-kitty *,
+.hello-kitty *:after,
+.hello-kitty *:before {
   position: absolute; }
 
-.micky-mouse-container {
-  width: 50rem;
-  height: 50rem;
-  position: relative;
-  z-index: -1; }
-  .micky-mouse-container .ear-container {
-    height: 12.5rem;
-    width: 12.5rem; }
-    .micky-mouse-container .ear-container:before {
-      border-radius: 50%;
-      width: 14rem;
-      height: 14rem;
-      border: 0.4rem solid black;
-      position: absolute;
-      content: ''; }
-    .micky-mouse-container .ear-container:hover:before {
-      background: red; }
-    .micky-mouse-container .ear-container:after {
-      border-radius: 50%;
-      width: 14rem;
-      height: 14rem;
-      border: 0.4rem solid black;
-      position: absolute;
-      content: '';
-      left: 25.5rem; }
-    .micky-mouse-container .ear-container:hover:after {
-      background: blue;
-      animation-name: rotation;
-      animation-duration: 5s;
-      transform: rotate(90deg);
-      transition: all 1s ease-out; }
-  .micky-mouse-container .head-container {
-    position: absolute;
-    border-radius: 50%;
-    width: 25rem;
-    height: 25rem;
-    border: 0.4rem solid black;
-    left: 7.3rem;
-    top: 8.8rem;
-    z-index: -1; }
-    .micky-mouse-container .head-container .top-part-head {
-      border-radius: 50%;
-      width: 12rem;
-      height: 18rem;
-      border: 0.4rem solid black;
-      top: 0.4rem;
-      z-index: 0; }
-      .micky-mouse-container .head-container .top-part-head.left {
-        left: 3.2rem; }
-      .micky-mouse-container .head-container .top-part-head.right {
-        right: 3.2rem; }
-    .micky-mouse-container .head-container .top-part-head-overlay {
-      border-radius: 50%;
-      width: 17rem;
-      height: 18rem;
-      border: 0.4rem solid black;
-      top: 1.95rem;
-      left: 3.8rem;
-      background: white;
-      z-index: 2;
-      border: none; }
-    .micky-mouse-container .head-container .eye-container {
-      left: 8rem;
-      top: 5rem;
-      z-index: 5; }
-      .micky-mouse-container .head-container .eye-container .left-eye {
-        left: 0.3rem;
-        position: absolute;
-        border-radius: 90% 90% 90% 90%/75% 75% 75% 75%;
-        width: 2.7rem;
-        height: 7.8rem;
-        border: 0.4rem solid black; }
-        .micky-mouse-container .head-container .eye-container .left-eye .left-eyeball {
-          border-radius: 90% 90% 90% 90%/75% 75% 75% 75%;
-          width: 1.75rem;
-          height: 3.25rem;
-          border: 0.4rem solid black;
-          position: absolute;
-          top: 4.1rem;
-          left: 0.4rem;
-          transform: rotate(5deg);
-          background: black;
-          z-index: 5; }
-      .micky-mouse-container .head-container .eye-container .right-eye {
-        position: absolute;
-        left: 75px;
-        border-radius: 90% 90% 90% 90%/75% 75% 75% 75%;
-        width: 2.7rem;
-        height: 7.8rem;
-        border: 0.4rem solid black; }
-        .micky-mouse-container .head-container .eye-container .right-eye .right-eyeball {
-          border-radius: 90% 90% 90% 90%/75% 75% 75% 75%;
-          width: 1.75rem;
-          height: 3.25rem;
-          border: 0.4rem solid black;
-          position: absolute;
-          top: 4.1rem;
-          transform: rotate(-5deg);
-          background: black;
-          z-index: 6; }
-    .micky-mouse-container .head-container .nose-container {
-      width: 15.6rem;
-      height: 6.25rem;
-      top: 12.5rem;
-      left: 3.75rem;
-      z-index: 5; }
-      .micky-mouse-container .head-container .nose-container .invisible-nose, .micky-mouse-container .head-container .nose-container .outer-nose {
-        width: 130px;
-        height: 38px;
-        left: 4.3rem;
-        border-radius: 50%;
-        background: black; }
-      .micky-mouse-container .head-container .nose-container .invisible-nose {
-        background: white;
-        top: 0.3rem; }
-      .micky-mouse-container .head-container .nose-container:after {
-        content: '';
-        top: 1.1rem;
-        left: 70px;
-        border-radius: 50%;
-        width: 120px;
-        height: 80px;
-        border: 0.4rem solid black; }
-    .micky-mouse-container .head-container .cheek-container {
-      border-radius: 50%;
-      width: 11.5rem;
-      height: 15rem;
-      border: 0.4rem solid black;
-      z-index: 3;
+.hello-kitty {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(to top left, red, #ffbf00, #80ff00, #00ff40, cyan, #0040ff, #8000ff, #ff00bf, red);
+  z-index: -5;
+  position: relative; }
+  .hello-kitty .ear-container {
+    z-index: 1;
+    top: 110px;
+    left: 120px; }
+    .hello-kitty .ear-container .ear {
+      width: 80px;
+      height: 75px;
+      border: 3px solid black;
+      border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%;
       background: white; }
-      .micky-mouse-container .head-container .cheek-container.left-cheek {
-        top: 9.5rem;
-        transform: rotate(-45deg); }
-      .micky-mouse-container .head-container .cheek-container.right-cheek {
-        top: 9.5rem;
-        left: 12rem;
-        transform: rotate(45deg); }
-      .micky-mouse-container .head-container .cheek-container.overlay {
-        border-radius: 50%;
-        width: 21.5rem;
-        height: 17rem;
-        border: 0.4rem solid black;
-        z-index: 4;
-        top: 7.2rem;
-        left: 1.3rem;
-        background: white;
-        border: none; }
-    .micky-mouse-container .head-container .chin-container {
-      top: 16rem;
-      width: 9.375rem;
-      height: 9.375rem;
-      border: solid 0.4rem #000;
-      border-color: transparent #000 #000 transparent;
-      border-bottom-right-radius: 50%;
-      transform: rotate(45deg);
-      left: 7rem;
-      z-index: 4;
-      background: white; }
-      .micky-mouse-container .head-container .chin-container:after {
-        content: '';
-        width: 8rem;
-        height: 8rem;
-        border: solid 0.4rem #000;
-        border-color: transparent #000 #000 transparent;
-        border-bottom-right-radius: 60%;
-        bottom: 0.75rem;
-        right: 0.75rem;
-        z-index: 4;
-        background: white; }
-      .micky-mouse-container .head-container .chin-container:before {
-        content: '';
-        width: 12rem;
-        height: 12rem;
-        border: solid 0.4rem #000;
-        border-color: transparent #000 #000 transparent;
-        border-bottom-right-radius: 70%;
-        bottom: 1.75rem;
-        right: 1.75rem;
-        background: white;
-        z-index: 5; }
-    .micky-mouse-container .head-container .tongue {
-      position: relative;
-      width: 5rem;
-      height: 1rem;
-      border: solid 0.4rem #000;
-      border-color: #000 transparent transparent transparent;
-      border-radius: 50%/1.25rem 1.25rem 0 0;
-      left: 8rem;
-      top: 21.7rem;
-      z-index: 6; }
-      .micky-mouse-container .head-container .tongue:after {
-        content: '';
-        left: 2.5rem;
-        bottom: 0.2rem;
-        width: 4.7rem;
-        height: 1rem;
-        border: solid 0.4rem #000;
-        border-color: #000 transparent transparent transparent;
-        border-radius: 50%/1rem 1rem 0 0; }
-    .micky-mouse-container .head-container .mouth {
-      width: 3.5rem;
-      height: 1rem;
-      border: solid 0.4rem #000;
-      border-color: #000 transparent transparent transparent;
-      border-radius: 50%/1.25rem 1.25rem 0 0;
-      left: 1.95rem;
-      z-index: 5;
-      top: 15.5rem; }
-      .micky-mouse-container .head-container .mouth.left-side {
-        right: 4rem;
-        transform: rotate(-20deg); }
-      .micky-mouse-container .head-container .mouth.right-side {
-        left: 18rem;
-        transform: rotate(20deg); }
+      .hello-kitty .ear-container .ear.left {
+        transform: rotate(-80deg); }
+      .hello-kitty .ear-container .ear.right {
+        transform: rotate(-15deg);
+        left: 140px; }
 
-.confetti {
-  width: 15px;
-  height: 15px;
-  background: red;
-  top: -20px;
-  left: 0;
-  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-  position: absolute;
-  animation: confetti 10s ease-in infinite;
-  opacity: 1;
-  z-index: -1; }
-
-@keyframes confetti {
-  100% {
-    top: 100%;
-    transform: rotate(1100deg); } }
-
-@keyframes box-animation {
+@keyframes shaking-head {
   0% {
-    opacity: 0; }
+    transform: translateY(1px) rotate(3deg); }
+  30% {
+    transform: translateY(1px) rotate(3deg); }
   50% {
-    opacity: 0.5; }
-  50% {
-    opacity: 0.75; }
+    transform: translateY(3px) rotate(5deg); }
+  70% {
+    transform: translateY(2px) rotate(3deg); }
   100% {
-    opacity: 1; } }
+    transform: translateY(1px) rotate(3deg); } }
+  .hello-kitty .head {
+    border-radius: 45%;
+    width: 210px;
+    height: 165px;
+    border: 0.2rem solid black;
+    top: 120px;
+    left: 120px;
+    z-index: 3;
+    background: white;
+    animation: shaking-head 2s linear infinite;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; }
+    .hello-kitty .head .face-container {
+      position: relative;
+      top: 80px;
+      left: 45px;
+      z-index: 3; }
+      .hello-kitty .head .face-container .eye {
+        border-radius: 45%;
+        width: 15px;
+        height: 22px;
+        border: 0.2rem solid black;
+        background: black; }
+        .hello-kitty .head .face-container .eye.left {
+          background: black;
+          z-index: 3; }
+          .hello-kitty .head .face-container .eye.left:hover {
+            background: white;
+            transition: 2s ease-out; }
+        .hello-kitty .head .face-container .eye.right {
+          background: black;
+          left: 100px; }
+      .hello-kitty .head .face-container .nose {
+        border-radius: 45%;
+        width: 22px;
+        height: 15px;
+        border: 0.2rem solid black;
+        left: 45px;
+        top: 20px;
+        background: yellow; }
+      .hello-kitty .head .face-container .whiskers-container {
+        left: -70px;
+        top: 12px; }
+        .hello-kitty .head .face-container .whiskers-container .whiskers {
+          width: 45px;
+          height: 15px;
+          border-radius: 40% 40% 0% 0%;
+          border-top: 0.2rem solid black;
+          background: transparent; }
+          .hello-kitty .head .face-container .whiskers-container .whiskers.whiskers-left:before {
+            width: 45px;
+            height: 15px;
+            border-radius: 40% 40% 0% 0%;
+            border-top: 0.2rem solid black;
+            background: transparent;
+            content: "";
+            top: -20px;
+            transform: rotate(10deg); }
+          .hello-kitty .head .face-container .whiskers-container .whiskers.whiskers-left:after {
+            width: 45px;
+            height: 15px;
+            border-radius: 40% 40% 0% 0%;
+            border-top: 0.2rem solid black;
+            background: transparent;
+            content: "";
+            top: 15px;
+            transform: rotate(-10deg); }
+          .hello-kitty .head .face-container .whiskers-container .whiskers.whiskers-right {
+            left: 210px; }
+            .hello-kitty .head .face-container .whiskers-container .whiskers.whiskers-right:before {
+              width: 45px;
+              height: 15px;
+              border-radius: 40% 40% 0% 0%;
+              border-top: 0.2rem solid black;
+              background: transparent;
+              content: "";
+              top: -20px;
+              transform: rotate(-10deg); }
+            .hello-kitty .head .face-container .whiskers-container .whiskers.whiskers-right:after {
+              width: 45px;
+              height: 15px;
+              border-radius: 40% 40% 0% 0%;
+              border-top: 0.2rem solid black;
+              background: transparent;
+              content: "";
+              top: 15px;
+              transform: rotate(10deg); }
+  .hello-kitty .body {
+    border-radius: 0%;
+    width: 100px;
+    height: 100px;
+    border: 0.2rem solid transparent;
+    background: transparent;
+    left: 180px;
+    top: 300px; }
+    .hello-kitty .body .arm-container {
+      position: relative;
+      top: 13px; }
+      .hello-kitty .body .arm-container .arm {
+        border: 5px solid black;
+        background: white; }
+        .hello-kitty .body .arm-container .arm.left {
+          z-index: 4;
+          width: 45px;
+          height: 20px;
+          top: -40px;
+          left: -20px;
+          border-radius: 50% 50% 0% 0%; }
+        .hello-kitty .body .arm-container .arm.right {
+          z-index: -5;
+          width: 45px;
+          height: 20px;
+          top: -40px;
+          left: 70px;
+          transform: rotate(40deg); }
+
+@keyframes shake {
+  from {
+    transform: translate(2px) rotate(0deg); }
+  to {
+    transform: translate(0px) rotate(2deg); } }
+
+@keyframes shake-wild {
+  from {
+    transform: translate(5px) rotate(0deg); }
+  to {
+    transform: translate(0px) rotate(15deg); } }
+        .hello-kitty .body .arm-container .arm.left-fist {
+          z-index: 5;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          top: -30px;
+          left: -23px;
+          transform: rotate(-10deg);
+          animation-name: shake;
+          animation-duration: 0.5s;
+          animation-iteration-count: infinite; }
+          .hello-kitty .body .arm-container .arm.left-fist .heart {
+            display: inline-block;
+            width: 15px;
+            left: 15px;
+            top: 15px;
+            aspect-ratio: 1;
+            border-image: radial-gradient(#b8bb8b, 69%, #0000 70%) 84.5% fill/100%;
+            clip-path: polygon(-41% 0, 50% 91%, 141% 0); }
+        .hello-kitty .body .arm-container .arm.right-fist {
+          z-index: 5;
+          width: 45px;
+          height: 50px;
+          border-radius: 45%;
+          top: -50px;
+          right: -50px;
+          transform: rotate(55deg);
+          animation: shake-wild;
+          animation-duration: 0.5s;
+          animation-iteration-count: infinite; }
+    .hello-kitty .body .feet-container {
+      z-index: 2;
+      position: relative;
+      top: 50px; }
+      .hello-kitty .body .feet-container .feet {
+        width: 60px;
+        height: 40px;
+        border: 5px solid black;
+        background: white;
+        transform: skewX(0deg); }
+        .hello-kitty .body .feet-container .feet.left {
+          top: -3px;
+          left: 5px;
+          border-radius: 70% 20% 20% 50% / 100% 35% 35% 50%; }
+        .hello-kitty .body .feet-container .feet.right {
+          top: -3px;
+          right: -25px;
+          border-radius: 20% 50% 35% 35% / 35% 20% 40% 20%; }
+  .hello-kitty .dress {
+    z-index: -3;
+    top: 270px;
+    left: 160px;
+    border-bottom: 100px solid #383695;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 130px; }
+  .hello-kitty .dress-part {
+    top: 305px;
+    left: 210px;
+    height: 55px;
+    width: 90px;
+    background: #f34a9c;
+    transform: skew(20deg) rotate(-10deg);
+    z-index: -2;
+    border: 6px solid black;
+    border-radius: 10px; }
+  .hello-kitty .guitar {
+    top: 295px;
+    left: 120px;
+    z-index: 1; }
+    .hello-kitty .guitar .guitar-body {
+      width: 120px;
+      height: 75px;
+      border-radius: 40% 50% 20% 50% / 40% 50% 35% 50%;
+      border: 5px solid black;
+      background: #ffd619;
+      transform: rotate(-20deg); }
+      .hello-kitty .guitar .guitar-body:after {
+        content: "";
+        width: 65px;
+        height: 40px;
+        border-radius: 50% 50% 20% 50% / 50% 50% 35% 50%;
+        border: 5px solid black;
+        background: black;
+        top: 10px;
+        left: 40px; }
+    .hello-kitty .guitar .guitar-fingerboard {
+      z-index: -1;
+      width: 145px;
+      height: 20px;
+      left: 110px;
+      top: 15px;
+      border-radius: 10%;
+      border-top: 5px solid black;
+      border-bottom: 5px solid black;
+      background: #bebddd;
+      transform: rotate(-5deg); }
+    .hello-kitty .guitar .guitar-end {
+      width: 60px;
+      height: 45px;
+      background: #ffd619;
+      left: 240px;
+      top: -5px;
+      transform: rotate(-5deg);
+      border-radius: 20%;
+      border: 10px solid black;
+      z-index: 0; }
+      .hello-kitty .guitar .guitar-end .tuning-peg, .hello-kitty .guitar .guitar-end .tuning-peg-2, .hello-kitty .guitar .guitar-end .tuning-peg-3, .hello-kitty .guitar .guitar-end .tuning-peg-4 {
+        z-index: -1;
+        width: 12px;
+        height: 40px;
+        top: -8px;
+        left: -5px;
+        border-radius: 50%;
+        background: #ffd619; }
+      .hello-kitty .guitar .guitar-end .tuning-peg-2 {
+        left: 8px; }
+      .hello-kitty .guitar .guitar-end .tuning-peg-3 {
+        left: 20px; }
+      .hello-kitty .guitar .guitar-end .tuning-peg-4 {
+        left: 35px; }
+      .hello-kitty .guitar .guitar-end .tuning-peg-5 {
+        top: 5px;
+        left: 25px;
+        width: 20px;
+        height: 20px;
+        background: #ffd619;
+        border-radius: 50%; }
+  .hello-kitty .melody {
+    width: 5px;
+    height: 45px;
+    background: black;
+    z-index: 10;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: absolute;
+    top: 310px;
+    left: 200px;
+    transform: scale(0.1) rotate(-10deg);
+    animation: melody-animation linear 4s infinite; }
+
+@keyframes melody-animation {
+  0% {
+    transform: scale(0.1) translate(20px, 20px); }
+  15% {
+    transform: translate(40px, 20px - 20px); }
+  30% {
+    transform: translate(90px, -100px); }
+  45% {
+    transform: translate(140px, -220px); }
+  60% {
+    transform: translate(170px, -340px); }
+  75% {
+    transform: translate(190px, -460px); }
+  90% {
+    transform: translate(190px, -580px); }
+  100% {
+    transform: translate(210px, -780px); } }
+    .hello-kitty .melody:before {
+      content: "";
+      width: 4px;
+      height: 15px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      transform: rotate(-40deg) skew(-8deg);
+      z-index: 10;
+      left: 5px;
+      background: black; }
+    .hello-kitty .melody:after {
+      content: "";
+      width: 20px;
+      height: 15px;
+      z-index: 10;
+      left: -15px;
+      top: 40px;
+      background: black;
+      border-radius: 45%; }
+  .hello-kitty .delay-1 {
+    animation-delay: 0.5s; }
+  .hello-kitty .delay-2 {
+    animation-delay: 1s; }
