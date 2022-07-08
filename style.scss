@@ -39,22 +39,22 @@ body {
       transform: translate($translateX + 20px, #{$translateY} - 20px);
     }
     30% {
-      transform: translate($translateX + 70px, $translateY - 120px);
+      transform: translate($translateX + 45px, $translateY - 70px);
     }
     45% {
-      transform: translate($translateX + 120px, $translateY - 240px);
+      transform: translate($translateX + 70px, $translateY - 120px);
     }
     60% {
-      transform: translate($translateX + 150px, $translateY - 360px);
+      transform: translate($translateX + 95px, $translateY - 170px);
     }
     75% {
-      transform: translate($translateX + 170px, $translateY - 480px);
+      transform: translate($translateX + 120px, $translateY - 220px);
     }
     90% {
-      transform: translate($translateX + 170px, $translateY - 600px);
+      transform: translate($translateX + 145px, $translateY - 270px);
     }
     100% {
-      transform: translate($translateX + 190px, $translateY - 800px);
+      transform: translate($translateX + 170px, $translateY - 320px);
     }
   }
 }
@@ -412,7 +412,7 @@ body {
     top: 310px;
     left: 200px;
     transform: scale(0.1) rotate(-10deg);
-    animation: melody-animation linear 4s infinite;
+    animation: melody-animation linear 2s infinite;
     &:before {
       content: "";
       width: 4px;

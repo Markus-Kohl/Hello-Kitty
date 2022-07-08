@@ -314,7 +314,7 @@ body {
     top: 310px;
     left: 200px;
     transform: scale(0.1) rotate(-10deg);
-    animation: melody-animation linear 4s infinite; }
+    animation: melody-animation linear 2s infinite; }
 
 @keyframes melody-animation {
   0% {
@@ -322,17 +322,17 @@ body {
   15% {
     transform: translate(40px, 20px - 20px); }
   30% {
-    transform: translate(90px, -100px); }
+    transform: translate(65px, -50px); }
   45% {
-    transform: translate(140px, -220px); }
+    transform: translate(90px, -100px); }
   60% {
-    transform: translate(170px, -340px); }
+    transform: translate(115px, -150px); }
   75% {
-    transform: translate(190px, -460px); }
+    transform: translate(140px, -200px); }
   90% {
-    transform: translate(190px, -580px); }
+    transform: translate(165px, -250px); }
   100% {
-    transform: translate(210px, -780px); } }
+    transform: translate(190px, -300px); } }
     .hello-kitty .melody:before {
       content: "";
       width: 4px;
